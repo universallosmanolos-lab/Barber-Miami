@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO y Metadatos -->
+    <title>Cuban 305 Barber | Barbería de Alta Gama en Miami (Brickell / Little Havana)</title>
+    <meta name="description" content="Cuban 305 Barber en Miami, FL (803 SW 5th Ave). Cortes clásicos, fades de precisión y perfilado de barba con oficio tradicional. Reserva directa por WhatsApp o llamada.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0F0F0F">
+
+    <!-- Open Graph / Redes Sociales y WhatsApp Preview -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="Cuban 305 Barber | Cortes y Fades en Miami">
+    <meta property="og:description" content="Oficio tradicional y energía moderna en 803 SW 5th Ave, Miami, FL 33130. Reserva tu silla en segundos.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=800&auto=format&fit=crop">
+    <meta property="og:locale" content="es_US">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon SVG en línea (Cero dependencias externas) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230F0F0F'/><rect x='8' y='8' width='84' height='84' rx='14' fill='none' stroke='%23EAB308' stroke-width='4'/><text x='50' y='65' fill='%23EAB308' font-family='sans-serif' font-weight='900' font-size='38' text-anchor='middle'>305</text></svg>">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts con swap de visualización -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons con versión fija para estabilidad comercial -->
+    <script src="https://unpkg.com/lucide@0.344.0/dist/umd/lucide.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0F0F0F',
+                        darkCard: '#161616',
+                        darkBorder: '#262626',
+                        goldPrimary: '#EAB308',
+                        goldAccent: '#D4AF37',
+                    },
+                    fontFamily: {
+                        heading: ['"Bebas Neue"', 'sans-serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .text-outline-gold {
+            -webkit-text-stroke: 1.5px #EAB308;
+            color: transparent;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(0.8);
+            cursor: pointer;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Estilo para foco visible accesible por teclado */
+        a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+            outline: 2px solid #EAB308;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-neutral-300 font-sans antialiased selection:bg-goldPrimary selection:text-black">
+
+    <!-- ========================================== -->
+    <!-- A. NAVEGACIÓN PRINCIPAL                    -->
+    <!-- ========================================== -->
+    <header class="sticky top-0 z-40 bg-[#0F0F0F]/95 backdrop-blur-md border-b border-darkBorder transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logotipo -->
+            <a href="#" class="flex items-center gap-3 group" aria-label="Cuban 305 Barber Inicio">
+                <div class="w-10 h-10 bg-goldPrimary text-black flex items-center justify-center font-heading text-xl font-bold tracking-tighter group-hover:scale-105 transition-transform duration-300 shadow-[0_0_15px_rgba(234,179,8,0.3)]">
+                    305
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-heading text-2xl tracking-widest text-white group-hover:text-goldPrimary transition-colors duration-300 leading-none">
+                        CUBAN 305
+                    </span>
+                    <span class="text-[9px] uppercase tracking-[0.3em] text-neutral-400 font-semibold">
+                        BARBER SHOP
+                    </span>
+                </div>
+            </a>
+
+            <!-- Enlaces Desktop -->
+            <nav class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-widest uppercase" aria-label="Navegación principal">
+                <a href="#servicios" class="hover:text-goldPrimary transition-colors duration-300">Servicios</a>
+                <a href="#contacto" class="hover:text-goldPrimary transition-colors duration-300">Ubicación</a>
+                <a href="#reservas" class="hover:text-goldPrimary transition-colors duration-300">Reservas</a>
+            </nav>
+
+            <!-- Botón CTA Desktop -->
+            <div class="hidden md:block">
+                <a href="#reservas" class="inline-flex items-center justify-center px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-black bg-goldPrimary hover:bg-goldAccent transition-all duration-300 shadow-[0_0_20px_rgba(234,179,8,0.2)] hover:shadow-[0_0_25px_rgba(234,179,8,0.4)] active:scale-95">
+                    RESERVAR AHORA
+                </a>
+            </div>
+
+            <!-- Botón Móvil -->
+            <button id="mobileMenuBtn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden text-white hover:text-goldPrimary p-2 focus:outline-none">
+                <i data-lucide="menu" class="w-7 h-7"></i>
+            </button>
+        </div>
+
+        <!-- Menú Móvil Desplegable -->
+        <div id="mobileMenu" class="hidden md:hidden bg-darkCard border-b border-darkBorder px-6 py-6 flex flex-col gap-4 text-center">
+            <a href="#servicios" class="nav-mobile-link text-sm uppercase tracking-widest py-2 text-neutral-200">Servicios</a>
+            <a href="#contacto" class="nav-mobile-link text-sm uppercase tracking-widest py-2 text-neutral-200">Ubicación</a>
+            <a href="#reservas" class="nav-mobile-link text-sm uppercase tracking-widest py-2 text-neutral-200">Reservas</a>
+            <a href="#reservas" class="nav-mobile-link w-full py-3 bg-goldPrimary text-black font-bold uppercase text-xs tracking-widest mt-2">RESERVAR AHORA</a>
+        </div>
+    </header>
+
+
+    <!-- ========================================== -->
+    <!-- B. SECCIÓN HERO (PORTADA)                  -->
+    <!-- ========================================== -->
+    <section class="relative min-h-[calc(100vh-80px)] flex items-center overflow-hidden border-b border-darkBorder">
+        <div class="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Columna Izquierda -->
+            <div class="lg:col-span-7 z-10 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 border border-darkBorder bg-darkCard/80 backdrop-blur-sm text-[11px] font-semibold uppercase tracking-[0.2em] text-goldPrimary">
+                    <span class="w-2 h-2 rounded-full bg-goldPrimary animate-pulse" aria-hidden="true"></span>
+                    OFICIO TRADICIONAL · ENERGÍA MODERNA
+                </div>
+
+                <h1 class="font-heading text-6xl sm:text-7xl xl:text-8xl leading-[0.9] tracking-tight text-white uppercase">
+                    EL ESTÁNDAR SUPREMO EN <br>
+                    <span class="text-outline-gold">CORTES</span> & FADES
+                </h1>
+
+                <p class="text-neutral-300 text-sm sm:text-base max-w-xl font-light leading-relaxed">
+                    Técnicas auténticas de barbería clásica cubana fusionadas con la precisión moderna de Miami. Atención meticulosa, detalles a navaja y estilo sin concesiones.
+                </p>
+
+                <!-- Grupo de Botones de Acción (Reserva WhatsApp + Llamada Directa + Servicios) -->
+                <div class="pt-4 flex flex-col sm:flex-row flex-wrap gap-4">
+                    <!-- Botón Principal: Reserva por WhatsApp -->
+                    <a href="#reservas" class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-goldPrimary hover:bg-goldAccent text-black font-bold uppercase text-xs tracking-widest transition-all duration-300 shadow-lg hover:shadow-goldPrimary/25 min-h-[44px] min-w-[44px] active:scale-95">
+                        <span>RESERVAR TU SILLA</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+                    </a>
+
+                    <!-- Botón de Llamada Telefónica Directa: CALL NOW -->
+                    <a href="tel:+13058586883" aria-label="Llamar directamente a Cuban 305 Barber al +1 305 858 6883" class="inline-flex items-center justify-center gap-2.5 px-8 py-4 border border-goldPrimary/70 hover:border-goldPrimary bg-darkCard/80 hover:bg-darkCard text-goldPrimary hover:text-white font-bold uppercase text-xs tracking-widest transition-all duration-300 shadow-md hover:shadow-goldPrimary/10 min-h-[44px] min-w-[44px] active:scale-95">
+                        <i data-lucide="phone" class="w-4 h-4 text-goldPrimary" aria-hidden="true"></i>
+                        <span>CALL NOW</span>
+                    </a>
+
+                    <!-- Enlace secundario al menú -->
+                    <a href="#servicios" class="inline-flex items-center justify-center px-8 py-4 border border-darkBorder hover:border-goldPrimary bg-darkCard/40 text-neutral-200 hover:text-white font-medium uppercase text-xs tracking-widest transition-all duration-300 min-h-[44px] min-w-[44px] active:scale-95">
+                        VER SERVICIOS
+                    </a>
+                </div>
+            </div>
+
+            <!-- Columna Derecha: Imagen Optimizada -->
+            <div class="lg:col-span-5 relative">
+                <div class="relative mx-auto max-w-md lg:max-w-none">
+                    <div class="absolute -inset-2 border border-goldPrimary/25 translate-x-3 translate-y-3 pointer-events-none hidden sm:block" aria-hidden="true"></div>
+                    
+                    <div class="relative overflow-hidden bg-darkCard shadow-2xl">
+                        <img 
+                            src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?q=80&w=800&auto=format&fit=crop" 
+                            alt="Barbero realizando un corte degradado profesional con tijera y navaja en Cuban 305 Barber" 
+                            width="800"
+                            height="980"
+                            loading="eager"
+                            fetchpriority="high"
+                            decoding="async"
+                            class="w-full h-[490px] object-cover filter contrast-125 grayscale hover:grayscale-0 transition-all duration-700 ease-in-out"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent opacity-85" aria-hidden="true"></div>
+                        <div class="absolute bottom-4 left-4 right-4 p-4 bg-darkCard/95 backdrop-blur-md border border-darkBorder flex items-center justify-between">
+                            <div>
+                                <p class="text-[10px] text-goldPrimary font-semibold uppercase tracking-widest">Sede Central</p>
+                                <p class="font-heading text-lg text-white">803 SW 5th Ave, Miami</p>
+                            </div>
+                            <i data-lucide="scissors" class="w-5 h-5 text-goldPrimary" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- C. SECCIÓN SERVICIOS                       -->
+    <!-- ========================================== -->
+    <section id="servicios" class="py-24 border-b border-darkBorder relative bg-[#121212]">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="max-w-2xl mb-16 reveal">
+                <span class="text-goldPrimary text-xs font-bold uppercase tracking-[0.25em] block mb-2">Cortes Exclusivos & Estilo</span>
+                <h2 class="font-heading text-5xl sm:text-6xl text-white uppercase tracking-tight">EL ESTÁNDAR CUBAN 305</h2>
+                <div class="w-16 h-1 bg-goldPrimary mt-3" aria-hidden="true"></div>
+                <p class="text-neutral-300 text-sm mt-4 font-light leading-relaxed">
+                    Cada uno de nuestros servicios incluye toalla caliente, perfilado milimétrico y productos de fijación premium.
+                </p>
+            </div>
+
+            <!-- Grid de 3 Tarjetas -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Servicio 01 -->
+                <div class="reveal group relative bg-darkCard border border-darkBorder p-8 transition-all duration-300 hover:-translate-y-2 hover:border-goldPrimary/60 hover:shadow-[0_15px_30px_rgba(0,0,0,0.7)] flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-baseline justify-between mb-8">
+                            <span class="font-heading text-4xl text-neutral-400 group-hover:text-goldPrimary transition-colors duration-300" aria-hidden="true">01</span>
+                            <span class="font-heading text-3xl text-white group-hover:text-goldPrimary transition-colors duration-300">$35</span>
+                        </div>
+                        <h3 class="font-heading text-3xl text-white tracking-wide uppercase mb-3">FADE PROFESIONAL</h3>
+                        <p class="text-neutral-300 text-xs sm:text-sm font-light leading-relaxed">
+                            Degradado limpio y preciso realizado con máquina. Transición suave desde cero con acabado rasurado y limpio en los bordes.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-darkBorder flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-neutral-300 group-hover:text-white">
+                        <span>40 MINUTOS</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4 text-goldPrimary" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <!-- Servicio 02 (Destacado) -->
+                <div class="reveal group relative bg-darkCard border border-goldPrimary/50 p-8 transition-all duration-300 hover:-translate-y-2 hover:border-goldPrimary hover:shadow-[0_15px_35px_rgba(234,179,8,0.15)] flex flex-col justify-between">
+                    <div class="absolute -top-3 right-6 bg-goldPrimary text-black text-[10px] font-extrabold uppercase tracking-widest px-3 py-1">
+                        MÁS SOLICITADO
+                    </div>
+                    <div>
+                        <div class="flex items-baseline justify-between mb-8">
+                            <span class="font-heading text-4xl text-neutral-400 group-hover:text-goldPrimary transition-colors duration-300" aria-hidden="true">02</span>
+                            <span class="font-heading text-3xl text-white group-hover:text-goldPrimary transition-colors duration-300">$30</span>
+                        </div>
+                        <h3 class="font-heading text-3xl text-white tracking-wide uppercase mb-3">PERFILADO + BARBA</h3>
+                        <p class="text-neutral-300 text-xs sm:text-sm font-light leading-relaxed">
+                            Limpieza total de la línea del cabello y delineado impecable de barba a navaja tradicional, acompañado de toalla caliente y loción hidratante.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-darkBorder flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-neutral-300 group-hover:text-white">
+                        <span>30 MINUTOS</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4 text-goldPrimary" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <!-- Servicio 03 -->
+                <div class="reveal group relative bg-darkCard border border-darkBorder p-8 transition-all duration-300 hover:-translate-y-2 hover:border-goldPrimary/60 hover:shadow-[0_15px_30px_rgba(0,0,0,0.7)] flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-baseline justify-between mb-8">
+                            <span class="font-heading text-4xl text-neutral-400 group-hover:text-goldPrimary transition-colors duration-300" aria-hidden="true">03</span>
+                            <span class="font-heading text-3xl text-white group-hover:text-goldPrimary transition-colors duration-300">$45</span>
+                        </div>
+                        <h3 class="font-heading text-3xl text-white tracking-wide uppercase mb-3">CORTE CABALLERO VIP</h3>
+                        <p class="text-neutral-300 text-xs sm:text-sm font-light leading-relaxed">
+                            Cualquier estilo de degradado combinado con corte de tijera artesanal en la parte superior. Asesoramiento morfológico y peinado profesional.
+                        </p>
+                    </div>
+                    <div class="mt-8 pt-6 border-t border-darkBorder flex items-center justify-between text-xs font-semibold tracking-wider uppercase text-neutral-300 group-hover:text-white">
+                        <span>55 MINUTOS</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4 text-goldPrimary" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- D. SECCIÓN RESERVAS Y FORMULARIO           -->
+    <!-- ========================================== -->
+    <section id="reservas" class="py-24 relative overflow-hidden bg-darkBg">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                
+                <!-- Columna Izquierda: Información de Contacto -->
+                <div id="contacto" class="lg:col-span-5 space-y-8 reveal">
+                    <div>
+                        <span class="text-goldPrimary text-xs font-bold uppercase tracking-[0.25em] block mb-2">Reserva Inmediata</span>
+                        <h2 class="font-heading text-5xl sm:text-6xl text-white uppercase tracking-tight leading-none">
+                            TU SILLA <br>ESTÁ ESPERANDO.
+                        </h2>
+                        <div class="w-16 h-1 bg-goldPrimary mt-4" aria-hidden="true"></div>
+                    </div>
+
+                    <p class="text-neutral-300 text-sm sm:text-base leading-relaxed font-light">
+                        Indícanos qué necesitas y la fecha deseada. El sistema abrirá directamente tu WhatsApp con los datos completados para confirmar tu reserva con el barbero de turno.
+                    </p>
+
+                    <div class="p-6 bg-darkCard border border-darkBorder space-y-5">
+                        <!-- Teléfono Clickable con Botón Call Now Directo -->
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 bg-darkBg border border-darkBorder flex items-center justify-center text-goldPrimary shrink-0" aria-hidden="true">
+                                    <i data-lucide="phone" class="w-5 h-5"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs text-neutral-400 uppercase tracking-widest font-semibold">¿Tienes preguntas?</p>
+                                    <a href="tel:+13058586883" class="font-heading text-2xl text-white hover:text-goldPrimary transition-colors" aria-label="Llamar al 305-858-6883">
+                                        +1 (305) 858-6883
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Botón Llamar en Sección Contacto -->
+                            <a href="tel:+13058586883" aria-label="Llamar ahora a Cuban 305 Barber" class="inline-flex items-center justify-center gap-2 px-5 py-3 border border-goldPrimary/60 hover:border-goldPrimary bg-darkBg hover:bg-goldPrimary text-goldPrimary hover:text-black font-bold uppercase text-xs tracking-wider transition-all duration-300 min-h-[44px] shrink-0 active:scale-95">
+                                <i data-lucide="phone" class="w-4 h-4" aria-hidden="true"></i>
+                                <span>CALL NOW</span>
+                            </a>
+                        </div>
+
+                        <!-- Dirección -->
+                        <div class="flex items-center gap-4 pt-4 border-t border-darkBorder/60">
+                            <div class="w-12 h-12 bg-darkBg border border-darkBorder flex items-center justify-center text-goldPrimary shrink-0" aria-hidden="true">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-neutral-400 uppercase tracking-widest font-semibold">Ubicación</p>
+                                <p class="text-sm font-medium text-neutral-200">
+                                    803 SW 5th Ave, Miami, FL 33130
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Horarios -->
+                        <div class="flex items-center gap-4 pt-4 border-t border-darkBorder/60">
+                            <div class="w-12 h-12 bg-darkBg border border-darkBorder flex items-center justify-center text-goldPrimary shrink-0" aria-hidden="true">
+                                <i data-lucide="clock" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-neutral-400 uppercase tracking-widest font-semibold">Horario de Atención</p>
+                                <p class="text-xs text-neutral-300">Lunes a Sábado: 9:00 AM – 8:00 PM</p>
+                                <p class="text-xs text-neutral-400">Domingo: 10:00 AM – 5:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna Derecha: Formulario Accesible -->
+                <div class="lg:col-span-7 reveal">
+                    <div class="bg-darkCard border border-darkBorder p-8 sm:p-10 relative shadow-2xl">
+                        <h3 class="font-heading text-3xl text-white uppercase tracking-wide mb-6 flex items-center justify-between">
+                            <span>SOLICITUD DE CITA</span>
+                            <span class="text-xs font-sans text-goldPrimary font-semibold tracking-wider flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-goldPrimary" aria-hidden="true"></span>
+                                ATENCIÓN DIRECTA
+                            </span>
+                        </h3>
+
+                        <form id="bookingForm" class="space-y-5" novalidate>
+                            
+                            <!-- Ubicación -->
+                            <div>
+                                <label for="locationInput" class="block text-xs uppercase font-semibold text-neutral-300 mb-2 tracking-wider">Ubicación del Local</label>
+                                <div class="w-full bg-[#1e1e1e] border border-darkBorder px-4 py-3 text-sm text-neutral-200 flex items-center justify-between">
+                                    <span>803 SW 5th Ave, Miami, FL 33130</span>
+                                    <span class="text-[10px] text-goldPrimary font-bold uppercase tracking-wider">Sede Oficial</span>
+                                </div>
+                                <input type="hidden" id="locationInput" value="803 SW 5th Ave, Miami, FL 33130">
+                            </div>
+
+                            <!-- Nombre y Teléfono con Validación -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="clientName" class="block text-xs uppercase font-semibold text-neutral-300 mb-2 tracking-wider">
+                                        Nombre Completo <span class="text-goldPrimary">*</span>
+                                    </label>
+                                    <input 
+                                        type="text" 
+                                        id="clientName" 
+                                        name="clientName" 
+                                        placeholder="Ej. Juan Pérez" 
+                                        required 
+                                        minlength="3"
+                                        maxlength="60"
+                                        class="w-full bg-[#1e1e1e] border border-darkBorder px-4 py-3 text-sm text-neutral-200 focus:outline-none focus:border-goldPrimary transition-colors duration-300 placeholder-neutral-500"
+                                    >
+                                    <p id="nameError" class="hidden text-xs text-red-400 mt-1" role="alert">Ingresa un nombre válido (mínimo 3 letras).</p>
+                                </div>
+                                <div>
+                                    <label for="clientPhone" class="block text-xs uppercase font-semibold text-neutral-300 mb-2 tracking-wider">
+                                        Teléfono / WhatsApp <span class="text-goldPrimary">*</span>
+                                    </label>
+                                    <input 
+                                        type="tel" 
+                                        id="clientPhone" 
+                                        name="clientPhone" 
+                                        placeholder="+1 (305) 000-0000" 
+                                        required 
+                                        pattern="[0-9+() -]{7,20}"
+                                        class="w-full bg-[#1e1e1e] border border-darkBorder px-4 py-3 text-sm text-neutral-200 focus:outline-none focus:border-goldPrimary transition-colors duration-300 placeholder-neutral-500"
+                                    >
+                                    <p id="phoneError" class="hidden text-xs text-red-400 mt-1" role="alert">Ingresa un número telefónico válido.</p>
+                                </div>
+                            </div>
+
+                            <!-- Servicio -->
+                            <div>
+                                <label for="serviceSelect" class="block text-xs uppercase font-semibold text-neutral-300 mb-2 tracking-wider">
+                                    Selecciona el Servicio <span class="text-goldPrimary">*</span>
+                                </label>
+                                <select id="serviceSelect" name="serviceSelect" required class="w-full bg-[#1e1e1e] border border-darkBorder px-4 py-3 text-sm text-neutral-200 focus:outline-none focus:border-goldPrimary transition-colors duration-300">
+                                    <option value="FADE PROFESIONAL ($35)">01. FADE PROFESIONAL — $35</option>
+                                    <option value="PERFILADO + BARBA ($30)" selected>02. PERFILADO + BARBA — $30</option>
+                                    <option value="CORTE CABALLERO VIP ($45)">03. CORTE CABALLERO VIP — $45</option>
+                                    <option value="SERVICIO COMPLETO VIP ($65)">04. SERVICIO COMPLETO VIP (Corte + Barba + Mascarilla) — $65</option>
+                                </select>
+                            </div>
+
+                            <!-- Fecha y Barbero -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="bookingDate" class="block text-xs uppercase font-semibold text-neutral-300 mb-2 tracking-wider">
+                                        Fecha Preferida <span class="text-goldPrimary">*</span>
+                                    </label>
+                                    <input 
+                                        type="date" 
+                                        id="bookingDate" 
+                                        name="bookingDate" 
+                                        required 
+                                        class="w-full bg-[#1e1e1e] border border-darkBorder px-4 py-3 text-sm text-neutral-200 focus:outline-none focus:border-goldPrimary transition-colors duration-300"
+                                    >
+                                    <p id="dateError" class="hidden text-xs text-red-400 mt-1" role="alert">Selecciona una fecha válida.</p>
+                                </div>
+                                <div>
+                                    <label for="barberFixed" class="block text-xs uppercase font-semibold text-neutral-300 mb-2 tracking-wider">Barbero Asignado</label>
+                                    <div class="w-full bg-[#1e1e1e] border border-darkBorder px-4 py-3 text-sm text-neutral-200 flex items-center justify-between">
+                                        <span id="barberFixed">Primer Barbero Disponible</span>
+                                        <i data-lucide="check-circle-2" class="w-4 h-4 text-goldPrimary" aria-hidden="true"></i>
+                                    </div>
+                                    <input type="hidden" id="barberInput" value="Primer barbero disponible">
+                                </div>
+                            </div>
+
+                            <!-- Botón de Envío -->
+                            <button type="submit" id="submitBtn" class="w-full mt-4 py-4 bg-goldPrimary hover:bg-goldAccent text-black font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-3 transition-all duration-300 shadow-md hover:shadow-goldPrimary/20 active:scale-[0.99]">
+                                <span>SOLICITAR RESERVA</span>
+                                <i data-lucide="arrow-right" class="w-4 h-4" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- FOOTER                                     -->
+    <!-- ========================================== -->
+    <footer class="border-t border-darkBorder bg-[#090909] py-10 text-xs text-neutral-400">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+            <div class="flex items-center gap-2">
+                <span class="font-heading text-xl text-white">CUBAN 305 BARBER</span>
+                <span>· 803 SW 5th Ave, Miami, FL 33130</span>
+            </div>
+            <div class="flex items-center gap-6 uppercase tracking-widest text-[11px]">
+                <a href="tel:+13058586883" class="hover:text-goldPrimary transition-colors">+1 (305) 858-6883</a>
+                <button id="openPrivacyBtn" class="hover:text-goldPrimary transition-colors underline-offset-4 hover:underline focus:outline-none">
+                    Aviso de Privacidad
+                </button>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ========================================== -->
+    <!-- MODAL 1: CONFIRMACIÓN DE RESERVA           -->
+    <!-- ========================================== -->
+    <div 
+        id="bookingModal" 
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300"
+        role="dialog" 
+        aria-modal="true" 
+        aria-labelledby="bookingModalTitle" 
+        aria-describedby="bookingModalDesc"
+    >
+        <div class="bg-darkCard border border-goldPrimary/40 max-w-md w-full p-8 text-center shadow-2xl transform scale-95 transition-transform duration-300">
+            <div class="w-14 h-14 bg-goldPrimary/10 border border-goldPrimary text-goldPrimary mx-auto flex items-center justify-center rounded-full mb-4" aria-hidden="true">
+                <i data-lucide="message-square" class="w-7 h-7"></i>
+            </div>
+            <h4 id="bookingModalTitle" class="font-heading text-3xl text-white uppercase tracking-wider mb-2">
+                ¡Tu Cita está Lista!
+            </h4>
+            <p id="bookingModalDesc" class="text-neutral-300 text-xs sm:text-sm leading-relaxed mb-4 font-light">
+                Hemos preparado tu mensaje con los datos de tu corte. Pulsa el botón abajo para abrir WhatsApp y recibir confirmación inmediata:
+            </p>
+            
+            <div id="bookingSummary" class="text-left bg-darkBg border border-darkBorder p-3.5 mb-6 text-xs text-neutral-300 space-y-1">
+                <!-- Inyectado por JS -->
+            </div>
+
+            <div class="flex flex-col gap-2.5">
+                <a 
+                    id="whatsappDirectLink" 
+                    href="#" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    class="w-full py-3.5 bg-goldPrimary hover:bg-goldAccent text-black font-bold uppercase text-xs tracking-widest transition-colors flex items-center justify-center gap-2"
+                >
+                    <span>ABRIR WHATSAPP AHORA</span>
+                    <i data-lucide="external-link" class="w-4 h-4" aria-hidden="true"></i>
+                </a>
+                <button 
+                    id="closeBookingModalBtn" 
+                    type="button" 
+                    class="w-full py-2.5 border border-darkBorder hover:border-neutral-500 text-neutral-400 hover:text-white uppercase text-[11px] tracking-wider transition-colors"
+                >
+                    Modificar datos
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- MODAL 2: AVISO DE PRIVACIDAD               -->
+    <!-- ========================================== -->
+    <div 
+        id="privacyModal" 
+        class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-all duration-300"
+        role="dialog" 
+        aria-modal="true" 
+        aria-labelledby="privacyModalTitle"
+    >
+        <div class="bg-darkCard border border-darkBorder max-w-lg w-full p-8 text-left shadow-2xl transform scale-95 transition-transform duration-300 max-h-[85vh] overflow-y-auto">
+            <h4 id="privacyModalTitle" class="font-heading text-2xl text-white uppercase tracking-wider mb-4 border-b border-darkBorder pb-2">
+                Aviso de Privacidad y Tratamiento de Datos
+            </h4>
+            <div class="text-xs text-neutral-300 space-y-3 leading-relaxed">
+                <p>
+                    <strong>1. Datos recopilados:</strong> Este sitio web únicamente recopila el nombre, número de teléfono, servicio y fecha seleccionada para gestionar su cita.
+                </p>
+                <p>
+                    <strong>2. Sin almacenamiento en base de datos:</strong> La información no se almacena en servidores intermedios ni se comercializa. Los datos se transmiten directamente a través del protocolo oficial de WhatsApp (wa.me) entre el cliente y el establecimiento.
+                </p>
+                <p class="p-3 bg-darkBg border border-darkBorder text-[11px] text-goldPrimary">
+                    <strong>[PENDIENTE DE CONFIRMACIÓN CON EL PROPIETARIO]:</strong> Razón social legal registrada, número de EIN/Tax ID en el estado de Florida, y política formal de cancelación/reembolsos previa a la puesta en producción definitiva.
+                </p>
+                <p>
+                    <strong>3. Contacto directo:</strong> Para cualquier consulta sobre sus datos, comuníquese directamente al teléfono oficial: +1 (305) 858-6883.
+                </p>
+            </div>
+            <button 
+                id="closePrivacyModalBtn" 
+                type="button" 
+                class="mt-6 w-full py-3 bg-goldPrimary text-black font-bold uppercase text-xs tracking-widest hover:bg-goldAccent transition-colors"
+            >
+                Cerrar Aviso
+            </button>
+        </div>
+    </div>
+
+
+    <!-- ========================================== -->
+    <!-- JAVASCRIPT: LÓGICA Y GESTIÓN DE ACCIONES   -->
+    <!-- ========================================== -->
+    <script>
+        // Inicializar iconos de Lucide
+        lucide.createIcons();
+
+        // Número oficial Cuban 305 Barber (+1 305-858-6883)
+        const WHATSAPP_PHONE = '13058586883';
+
+        // 1. Menú Móvil accesible
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', !isHidden);
+        });
+
+        document.querySelectorAll('.nav-mobile-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // 2. Scroll Reveal con Observer
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // 3. Control de fecha mínima (hoy en adelante)
+        const dateInput = document.getElementById('bookingDate');
+        const todayStr = new Date().toISOString().split('T')[0];
+        dateInput.min = todayStr;
+        dateInput.value = todayStr;
+
+        // 4. Elementos de los Modales
+        const bookingForm = document.getElementById('bookingForm');
+        const submitBtn = document.getElementById('submitBtn');
+        
+        const bookingModal = document.getElementById('bookingModal');
+        const bookingSummary = document.getElementById('bookingSummary');
+        const whatsappDirectLink = document.getElementById('whatsappDirectLink');
+        const closeBookingModalBtn = document.getElementById('closeBookingModalBtn');
+
+        const privacyModal = document.getElementById('privacyModal');
+        const openPrivacyBtn = document.getElementById('openPrivacyBtn');
+        const closePrivacyModalBtn = document.getElementById('closePrivacyModalBtn');
+
+        function openModal(modalEl, focusEl) {
+            modalEl.classList.remove('opacity-0', 'pointer-events-none');
+            modalEl.querySelector('div').classList.remove('scale-95');
+            if (focusEl) focusEl.focus();
+        }
+
+        function closeModal(modalEl) {
+            modalEl.classList.add('opacity-0', 'pointer-events-none');
+            modalEl.querySelector('div').classList.add('scale-95');
+        }
+
+        // 5. Validación en cliente y apertura de WhatsApp
+        bookingForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const nameInput = document.getElementById('clientName');
+            const phoneInput = document.getElementById('clientPhone');
+            const service = document.getElementById('serviceSelect').value;
+            const date = document.getElementById('bookingDate').value;
+            const location = document.getElementById('locationInput').value;
+            const barber = document.getElementById('barberInput').value;
+
+            const nameVal = nameInput.value.trim();
+            const phoneVal = phoneInput.value.trim();
+
+            let isValid = true;
+
+            // Validación de nombre
+            if (nameVal.length < 3) {
+                document.getElementById('nameError').classList.remove('hidden');
+                nameInput.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                document.getElementById('nameError').classList.add('hidden');
+                nameInput.classList.remove('border-red-500');
+            }
+
+            // Validación de teléfono
+            const phoneRegex = /^[0-9+() -]{7,20}$/;
+            if (!phoneRegex.test(phoneVal)) {
+                document.getElementById('phoneError').classList.remove('hidden');
+                phoneInput.classList.add('border-red-500');
+                isValid = false;
+            } else {
+                document.getElementById('phoneError').classList.add('hidden');
+                phoneInput.classList.remove('border-red-500');
+            }
+
+            if (!isValid) return;
+
+            // Mensaje oficial
+            const message = 
+`💈 *SOLICITUD DE CITA - CUBAN 305 BARBER* 💈
+----------------------------------
+👤 *Cliente:* ${nameVal}
+📞 *Teléfono:* ${phoneVal}
+📍 *Sede:* ${location}
+✂️ *Servicio:* ${service}
+📅 *Fecha:* ${date}
+💈 *Barbero:* ${barber}
+----------------------------------
+_Enviado desde cuban305barber.com_`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${WHATSAPP_PHONE}?text=${encodedMessage}`;
+
+            bookingSummary.innerHTML = `
+                <p><strong>Cliente:</strong> ${escapeHtml(nameVal)}</p>
+                <p><strong>Servicio:</strong> ${escapeHtml(service)}</p>
+                <p><strong>Fecha:</strong> ${escapeHtml(date)}</p>
+                <p><strong>Asignación:</strong> ${escapeHtml(barber)}</p>
+            `;
+
+            whatsappDirectLink.href = whatsappUrl;
+            openModal(bookingModal, whatsappDirectLink);
+        });
+
+        closeBookingModalBtn.addEventListener('click', () => {
+            closeModal(bookingModal);
+            submitBtn.focus();
+        });
+
+        openPrivacyBtn.addEventListener('click', () => {
+            openModal(privacyModal, closePrivacyModalBtn);
+        });
+
+        closePrivacyModalBtn.addEventListener('click', () => {
+            closeModal(privacyModal);
+            openPrivacyBtn.focus();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                if (!bookingModal.classList.contains('pointer-events-none')) {
+                    closeModal(bookingModal);
+                    submitBtn.focus();
+                }
+                if (!privacyModal.classList.contains('pointer-events-none')) {
+                    closeModal(privacyModal);
+                    openPrivacyBtn.focus();
+                }
+            }
+        });
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+    </script>
+</body>
+</html>
